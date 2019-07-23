@@ -36,3 +36,4 @@ objFile.Close
 ' objFSO.CopyFile "C:\temp\*.txt", "C:\Windows\Desktop"
 ' objFSO.MoveFile "C:\temp\*.txt", "C:\Windows\Desktop"
 ' objFSO.DeleteFile "C:\temp\*.txt", False
+   
