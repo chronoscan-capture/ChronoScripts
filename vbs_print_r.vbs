@@ -109,7 +109,7 @@ end function
 dim output
 output = print_r(array("test", "me", "please"), "[pre:]array")
 
-// configs
+' configs
 Style = vbYesNo + vbCritical + vbDefaultButton2    ' Define buttons.
 Title = "MsgBox Demonstration"    ' Define title.
 Help = ""   
