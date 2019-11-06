@@ -2,6 +2,13 @@
 ' note: it does not support classes
 ' credit: http://tappetyclick.com/blog/2014/04/17/printr-function-classic-asp-vbscript#.XcGbDFX0myo
 
+' Info: Add the code between ('functions and 'end functions) at the beginning of your script.
+
+' Then objects and variables can be output like:
+    'dim output
+    'output = print_r(array("test", "me", "please"), "[pre:]array")
+    'Response = MsgBox(output)
+
 ' functions
 
 function print_r(data, dumpRef)
@@ -104,6 +111,8 @@ public function Tab(spaces)
   next
   Tab = val
 end function
+
+'end functions
 
 ' Usage example
 dim output
