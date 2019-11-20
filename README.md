@@ -3,15 +3,4 @@ Increase the power and flexibility of ChronoScan Advanced and ChronoScan Enterpr
 
 ## More info
 https://www.chronoscan.org/doc/vbscript_editor_window.htm
-
-
-
-  %%%%   %%  %%  %%%%%    %%%%   %%  %%   %%%%    %%%%    %%%%    %%%%   %%  %% 
- %%  %%  %%  %%  %%  %%  %%  %%  %%% %%  %%  %%  %%      %%  %%  %%  %%  %%% %% 
- %%      %%%%%%  %%%%%   %%  %%  %% %%%  %%  %%   %%%%   %%      %%%%%%  %% %%% 
- %%  %%  %%  %%  %%  %%  %%  %%  %%  %%  %%  %%      %%  %%  %%  %%  %%  %%  %% 
-  %%%%   %%  %%  %%  %%   %%%%   %%  %%   %%%%    %%%%    %%%%   %%  %%  %%  %% 
-                                                                                
-
-                                                                  
-
+                                                         
