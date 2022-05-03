@@ -1,6 +1,6 @@
 
 ' ----------------------------------------
-' Ignoring batches example
+' Ignoring documents example
 ' ----------------------------------------
 
 Set Batch = ChronoApp.GetCurrentBatch ' Set batch to currently opened batch object
