@@ -1,3 +1,8 @@
+
+' ----------------------------------------
+' Ignoring batches example
+' ----------------------------------------
+
 Set Batch = ChronoApp.GetCurrentBatch ' Set batch to currently opened batch object
 
 Dim NumDocs
@@ -22,3 +27,14 @@ For numDoc = 0 To NumDocs-1
     End If
 
 Next
+
+' ----------------------------------------
+' Toggling Ignored/ not ignored documents
+' ----------------------------------------
+Dim toggle 
+If Batch.IsDocumentIgnored(1) = 1 Then toggle = 0 Else toggle = 1 End If 
+Call Batch.IgnoreDocument(1, toggle)
+
+
+
+
