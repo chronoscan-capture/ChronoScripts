@@ -2,7 +2,9 @@
 Set Batch = ChronoApp.GetCurrentBatch ' Set batch to currently opened batch object
 Set Doc = Batch.GetSelectedDocument()
 
-fieldValue = Doc.GetDocNumber()
-Call Doc.IgnorePage(1, 1)' for example; we ignore first page of selected doc
+If Not Doc Is Nothing Then
+  fieldValue = Doc.GetDocNumber()
+  Call Doc.IgnorePage(1, 1)' for example; we ignore first page of selected doc
 
-msgbox "Document " & (fieldValue+1) & " is selected"
+  MsgBox "Document " & (fieldValue+1) & " is selected"
+End If
