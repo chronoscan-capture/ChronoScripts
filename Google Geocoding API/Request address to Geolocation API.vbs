@@ -1,6 +1,6 @@
 ' ChronoScan HubGEOAPI
 ' since version 1.0.2.73
-' It requires an active Google Vision service configured:
+' It requires an active Google Geolocation service configured:
 '   Either a ChronoScan service account with credits or an external google cloud application with a valid API_KEY 
 Dim response
 Dim property
@@ -20,7 +20,7 @@ else
     ' response =  HubGEOAPI.GetResponseText()
     
     ' Retrieving an especific property from response json
-    ' available property: 
+    ' available properties: 
     '   "formatted_address", "country_name", "country_code", "street", "street_number", "city", "postal_code", 
     '   "latitude" or "lat", "longitude" or "lng", "place_id"
 
@@ -34,3 +34,4 @@ else
     msgbox "Coordinates, latitude " & lat & " - longitude: " & lng
 
 End If
+
