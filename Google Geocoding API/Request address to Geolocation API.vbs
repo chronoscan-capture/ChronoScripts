@@ -3,7 +3,7 @@
 ' It requires an active Google Geolocation service configured:
 '   Either a ChronoScan service account with credits or an external google cloud application with a valid API_KEY 
 Dim response
-Dim property
+Dim prop
 Dim lat
 Dim lng
 ' 1 => Ok, 0 => Fail
@@ -25,8 +25,8 @@ else
     '   "latitude" or "lat", "longitude" or "lng", "place_id"
 
     ' example 1: get full address
-    property = HubGEOAPI.GetAddressComponent("formatted_address")
-    msgbox "Full address: " & property
+    prop = HubGEOAPI.GetAddressComponent("formatted_address")
+    msgbox "Full address: " & prop
 
     ' example 2: get coordinates
     lat = HubGEOAPI.GetAddressComponent("lat")
