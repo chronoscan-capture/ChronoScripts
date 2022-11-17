@@ -9,7 +9,11 @@ Dim lng
 ' 1 => Ok, 0 => Fail
 Dim requestSuccess
 
-requestSuccess = HubGEOAPI.ProcessAddressInfo("Calle Alcalá, 28080", "")
+' from a static direction:
+requestSuccess = HubGEOAPI.ProcessAddressInfo("Calle Alcalá, 28080", "") 
+
+' Getting the direction from an ocr field called 'Direction' for example: 
+' requestSuccess = HubGEOAPI.ProcessAddressInfo(UserField_Direction.value, "") 
 
 If requestSuccess <> 1 Then
     ' getting the error
@@ -23,7 +27,7 @@ else
     ' available properties: 
     '   "formatted_address", "country_name", "country_code", "street", "street_number", "city", "postal_code", 
     '   "latitude" or "lat", "longitude" or "lng", "place_id"
-
+73
     ' example 1: get full address
     prop = HubGEOAPI.GetAddressComponent("formatted_address")
     msgbox "Full address: " & prop
