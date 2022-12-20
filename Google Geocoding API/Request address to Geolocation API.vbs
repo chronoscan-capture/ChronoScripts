@@ -13,8 +13,8 @@ Dim lng
 ' from a static direction:
 request = HubGEOAPI.ProcessAddressInfo("Calle Alcalá, 28080", "") 
 
-' Getting the direction from an ocr field called 'Direction' for example: 
-' requestSuccess = HubGEOAPI.ProcessAddressInfo(UserField_Direction.value, "") 
+' Getting the address from an ocr field called 'Address' for example: 
+' requestSuccess = HubGEOAPI.ProcessAddressInfo(UserField_Address.value, "") 
 
 If request <> 1 Then
     ' getting the error
@@ -24,7 +24,7 @@ else
     ' response will hold a full google Geocoding API response json
     ' response =  HubGEOAPI.GetResponseText()
     
-    ' Retrieving an especific property from response json
+    ' Retrieving a specific property from the response json
     ' available properties: 
     '   "formatted_address", "country_name", "country_code", "street", "street_number", "city", "postal_code", 
     '   "latitude" or "lat", "longitude" or "lng", "place_id"
