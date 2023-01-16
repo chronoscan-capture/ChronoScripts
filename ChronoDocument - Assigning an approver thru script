@@ -13,7 +13,7 @@ approverid = job.GetUserId(username)
 
 ' msgbox " user " & username & " has id " & approverid
 
-' check if the job ha apporval workflow active
+' check if the job ha approval workflow active
 If job.IsApprovalWorkflow Then
 
     ' check if user is approver
