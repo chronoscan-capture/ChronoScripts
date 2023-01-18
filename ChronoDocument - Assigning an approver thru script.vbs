@@ -9,7 +9,7 @@ username = "JApprover"
 
 ' get an user Id
 Dim approverid
-approverid = job.GetUserId(username)
+approverid = ChronoApp.GetUserId(username)
 
 ' msgbox " user " & username & " has id " & approverid
 
