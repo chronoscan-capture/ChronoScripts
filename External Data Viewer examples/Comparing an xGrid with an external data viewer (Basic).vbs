@@ -1,4 +1,5 @@
-' Basic example comparing an xgrid table with an external database viewer in matchin mode (enterprise)
+' Basic example comparing an xgrid table with an external database viewer in matching mode
+' see https://chronoscan.org/doc/chronoextdbviewer.htm for full ChronoExtDBViewer object
 
 Set Batch = ChronoApp.GetCurrentBatch
 Set curDoc = Batch.getSelectedDocument
@@ -6,7 +7,7 @@ Set curDoc = Batch.getSelectedDocument
 Dim tableNumber, numRows
 tableNumber=1'we are using table 1
  
-numRows=Batch.GetXgridRowCount (curDoc.GetDocNumber ,tableNumber)
+numRows=Batch.GetXgridRowCount (curDoc.GetDocNumber , tableNumber)
 ' MsgBox "Total Records in xgrid table: "  + CStr(numRows)            
 
 Dim lineMismatches
@@ -42,25 +43,20 @@ For row = 0 To numRows-1
         ' External dbviewer manipulation
         Dim exdbview_lineId 
         Dim exdbview_lineId_colIndex
-        Dim exdbview_lineId_coltype
         Dim exdbview_Quantity
         Dim exdbview_Quantity_colIndex
-        Dim exdbview_Quantity_coltype
         Dim exdbview_Rate
         Dim exdbview_Rate_colIndex
-        Dim exdbview_Rate_coltype
         Dim exdbview_Amount
         Dim exdbview_Amount_colIndex
-        Dim exdbview_Amount_coltype
         
         exdbview_lineId_colIndex = ChronoExtDBViewer.GetColIndex("LineId")
         If exdbview_lineId_colIndex <> -1 Then
             
-            ' Compaaring line id
+            ' Comparing line id
             exdbview_lineId = ChronoExtDBViewer.GetCellValueNumeric(row, exdbview_lineId_colIndex)
             exdbview_lineId = "000" & exdbview_lineId
             If exdbview_lineId <> xgrid_lineId  Then
-                ' if cell value contains the string we are looking for, we set a green background, for example
                 ret = ChronoExtDBViewer.AddStyleClass(row, exdbview_lineId_colIndex, "danger")
                 anyMismatch = anyMismatch+1
             Else 
@@ -71,7 +67,6 @@ For row = 0 To numRows-1
             exdbview_Quantity_colIndex = ChronoExtDBViewer.GetColIndex("Quantity")
             exdbview_Quantity = ChronoExtDBViewer.GetCellValueNumeric(row, exdbview_Quantity_colIndex)
             If CDbl(exdbview_Quantity) <> CDbl(xgrid_Quantity)  Then
-                ' if cell value contains the string we are looking for, we set a green background, for example
                 ret = ChronoExtDBViewer.AddStyleClass(row, exdbview_Quantity_colIndex, "danger")
                 anyMismatch = anyMismatch+1
             Else 
@@ -82,7 +77,6 @@ For row = 0 To numRows-1
             exdbview_Rate_colIndex = ChronoExtDBViewer.GetColIndex("Rate")
             exdbview_Rate = ChronoExtDBViewer.GetCellValueNumeric(row, exdbview_Rate_colIndex)
             If CDbl(xgrid_Rate) <> CDbl(exdbview_Rate)  Then
-                ' if cell value contains the string we are looking for, we set a green background, for example
                 ret = ChronoExtDBViewer.AddStyleClass(row, exdbview_Rate_colIndex, "danger")
                 anyMismatch = anyMismatch+1
             Else 
@@ -93,7 +87,6 @@ For row = 0 To numRows-1
             exdbview_Amount_colIndex = ChronoExtDBViewer.GetColIndex("Amount")
             exdbview_Amount = ChronoExtDBViewer.GetCellValueNumeric(row, exdbview_Amount_colIndex)
             If CDbl(xgrid_Amount) <> CDbl(exdbview_Amount)  Then
-                ' if cell value contains the string we are looking for, we set a green background, for example
                 ret = ChronoExtDBViewer.AddStyleClass(row, exdbview_Amount_colIndex, "danger")
                 anyMismatch = anyMismatch+1
             Else 
