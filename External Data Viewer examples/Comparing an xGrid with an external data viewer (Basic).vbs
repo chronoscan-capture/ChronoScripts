@@ -108,5 +108,5 @@ Next
 
 ' summary
 If lineMismatches > 0 Then
-    msgbox "There are " & lineMismatches & " mismatch(es) on this document on lines " & linesId
+    msgbox "There is/are " & lineMismatches & " mismatch(es) on this document on line(s) " & linesId
 End If
