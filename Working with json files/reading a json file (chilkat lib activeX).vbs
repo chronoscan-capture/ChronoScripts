@@ -9,7 +9,7 @@ Set fso = CreateObject("Scripting.FileSystemObject")
 
 jsonFilePath = "path_to_json_file"
 
-'read content of JSON
+' read content of JSON
 Dim fileContent
 Set file = fso.OpenTextFile(jsonFilePath)
 fileContent = file.ReadAll
