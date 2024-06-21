@@ -1,5 +1,5 @@
 
-' This script is placed on the enterprise event: OnENT_ValidateDocument
+' This script example is placed on the enterprise event: OnENT_ValidateDocument
 ' thit event is triggered when an user clicks the validate document button on the indexer
 
 
