@@ -5,18 +5,33 @@
 '      The "CHATGPT" label must exists in the working Job 
 ' !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-' Place this script on the "OnDocumentProcessFinish" document event
+' Place this script in the "OnProcessFinish" event
 
-Dim val
-val = ChronoDocument.get_field_value("sysval_oai")
+Set Batch = ChronoApp.GetCurrentBatch ' Set batch to currently opened batch object
 
-' get the current batch
-Set ChronoBatch = ChronoApp.GetCurrentBatch()
-If val = "1" Then
+Dim NumDocs
+Dim NumRequestOk
+NumRequestOk = 0
+NumDocs=Batch.GetDocCount ' Get the number of documents in the batch
+ 
+' Loop the batch
+For numDoc = 0 To NumDocs-1
+
+    ' Get the document object
+    Set Doc=Batch.GetDocument(numDoc)
+    'Get a field value for current document
+    fieldvalue = Doc.get_field_value("sysval_oai")
+    
+    If fieldvalue = "1" Then
+        NumRequestOk = NumRequestOk + 1
+    End If
+
+Next
+
+If NumDocs = NumRequestOk Then
     ' add and existing label for the job
-    res = ChronoBatch.AddLabel("CHATGPT")
+    res = Batch.AddLabel("CHATGPT")
 Else
     ' add and existing label for the job
-    res = ChronoBatch.RemoveLabel("CHATGPT")
+    res = Batch.RemoveLabel("CHATGPT")
 End If
-
