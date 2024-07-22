@@ -2,10 +2,11 @@
 ' This is a basic example of how to label everybatch that is successfully processed with a ChatGPT request
 
 ' !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-'      The "CHATGPT" label must exists in the working Job 
+'   * Only enterprise Jobs
+'   * The "CHATGPT" label must exists in the working Job 
 ' !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-' Place this script in the "OnProcessFinish" event
+' Place this script in the "OnProcessFinish" event:
 
 Set Batch = ChronoApp.GetCurrentBatch ' Set batch to currently opened batch object
 
