@@ -29,9 +29,9 @@ For numDoc = 0 To NumDocs-1
 Next
 
 If NumDocs = NumRequestOk Then
-    ' add and existing label for the job
+    ' add existing label for the job
     res = Batch.AddLabel("CHATGPT")
 Else
-    ' add and existing label for the job
+    ' remove existing label for the job
     res = Batch.RemoveLabel("CHATGPT")
 End If
