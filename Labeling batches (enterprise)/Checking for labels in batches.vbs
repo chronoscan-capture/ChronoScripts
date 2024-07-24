@@ -1,4 +1,4 @@
-' Adding a label to a batch
+' Checking for labels in a batch
 Dim res
 Dim label
 label = "DUPLICATE"
@@ -6,7 +6,7 @@ label = "DUPLICATE"
 ' get the current batch
 Set ChronoBatch = ChronoApp.GetCurrentBatch()
 
-' add and existing label for the job
+' ask for label
 res = ChronoBatch.HasLabel(label)
 
 If res = 1 Then
