@@ -4,10 +4,10 @@ Dim label
 label = "DUPLICATE"
 
 ' get the current batch
-Set ChronoBatch = ChronoApp.GetCurrentBatch()
+Set batch = ChronoApp.GetCurrentBatch()
 
 ' ask for label
-res = ChronoBatch.HasLabel(label)
+res = batch.HasLabel(label)
 
 If res = 1 Then
     MsgBox "Batch has the label " & label
