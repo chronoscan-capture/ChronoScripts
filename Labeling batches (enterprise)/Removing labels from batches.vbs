@@ -3,10 +3,10 @@
 Dim res
 
 ' get the current batch
-Set ChronoBatch = ChronoApp.GetCurrentBatch()
+Set batch = ChronoApp.GetCurrentBatch()
 
 ' add and existing label for the job
-res = ChronoBatch.RemoveLabel("DUPLICATE")
+res = batch.RemoveLabel("DUPLICATE")
 
 If res = 1 Then
     MsgBox "Label removed"
