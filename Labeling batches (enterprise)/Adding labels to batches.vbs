@@ -3,10 +3,10 @@
 Dim res
 
 ' get the current batch
-Set ChronoBatch = ChronoApp.GetCurrentBatch()
+Set batch = ChronoApp.GetCurrentBatch()
 
 ' add and existing label for the job
-res = ChronoBatch.AddLabel("DUPLICATE")
+res = batch.AddLabel("DUPLICATE")
 
 If res = 1 Then
     MsgBox "Label added"
