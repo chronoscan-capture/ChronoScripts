@@ -1,5 +1,5 @@
 ' Get the current batch
-Set ChronoBatch = ChronoApp.GetCurrentBatch()
+Set batch = ChronoApp.GetCurrentBatch()
 
 ' Declare variables
 Dim all_labels
@@ -9,7 +9,7 @@ Dim labels_array
 all_labels = ""
 
 ' Get the array of labels
-labels_array = ChronoBatch.GetLabels()
+labels_array = batch.GetLabels()
 
 ' Iterate through the array of labels and concatenate them
 For Each strLabel In labels_array
