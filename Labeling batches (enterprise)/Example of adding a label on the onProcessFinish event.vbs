@@ -8,12 +8,12 @@
 
 ' Place this script in the "OnProcessFinish" event:
 
-Set Batch = ChronoApp.GetCurrentBatch ' Set batch to currently opened batch object
+Set batch = ChronoApp.GetCurrentBatch ' Set batch to currently opened batch object
 
 Dim NumDocs
 Dim NumRequestOk
 NumRequestOk = 0
-NumDocs=Batch.GetDocCount ' Get the number of documents in the batch
+NumDocs=batch.GetDocCount ' Get the number of documents in the batch
  
 If NumDocs > 0 Then
 
@@ -33,10 +33,10 @@ If NumDocs > 0 Then
 
     If NumDocs = NumRequestOk Then
         ' add existing label for the job
-        res = Batch.AddLabel("CHATGPT")
+        res = batch.AddLabel("CHATGPT")
     Else
         ' remove existing label for the job
-        res = Batch.RemoveLabel("CHATGPT")
+        res = batch.RemoveLabel("CHATGPT")
     End If
 
 Else
